@@ -1,0 +1,45 @@
+<h1>Bicicleta</h1>
+<table>
+    <tr>
+        <td>color</td>
+        <td><input type="text" [(ngModel)]="bicicleta.color"></td>
+    </tr>
+    <tr>
+        <td>Mardca</td>
+        <td><input type="text" [(ngModel)]="bicicleta.marca"></td>
+    </tr>
+    <tr>
+        <td>Velocidad</td>
+        <td><input type="number" [(ngModel)]="bicicleta.velocidad"></td>
+    </tr>
+    <tr>
+        <td>Piñones</td>
+        <td><input type="number" [(ngModel)]="bicicleta.pin"></td>
+    </tr>
+    <tr>
+        <td>Platos</td>
+        <td><input type="number" [(ngModel)]="bicicleta.plat"></td>
+    </tr>
+    <tr>
+        <td>Es electrica?</td>
+        <td><input type="checkbox" (change)="esElectrica()"></td>
+    </tr>
+</table>
+<input type="button" value="Mostrar bici" (click)="mostrar()">
+<br>
+<h2>Control de velocidad</h2>
+
+<input type="button" value="Acelera 1" (click)="bicicleta.acelera1()">
+<input type="button" value="Frena 1" (click)="bicicleta.frena1()">
+<p>
+    <input type="number" [(ngModel)]="cAcelera"> 
+    <input type="button" value="Acelera" (click)="bicicleta.acelera(cAcelera)">
+</p>
+<p>
+    <input type="number" [(ngModel)]="cFrena">
+    <input type="button" value="Frena" (click)="bicicleta.frena(cFrena)">
+</p>
+<input type="button" value="Frenar en seco" (click)="bicicleta.frenazo()">
+
+<h2>Informacion sobre la bicicleta</h2>
+<textarea rows="2" cols="50" [(ngModel)]="texto" readonly></textarea>
