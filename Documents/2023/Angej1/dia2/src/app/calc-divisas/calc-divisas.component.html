@@ -1,0 +1,9 @@
+<p>Cantidad: 
+    <input type="number" [(ngModel)]="eurs">
+    <select [(ngModel)]="divisa">
+        <option value="Libra">Libra</option>
+        <option value="Dolar">Dolar</option>
+        <option value="Yen">Yen</option>
+    </select>
+<input type="button" value="Calcular" (click)="calcular()">
+<p>resultado: <input type="text" [(ngModel)]="result" disabled></p>
