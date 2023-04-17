@@ -6,18 +6,12 @@ import { clasePaciente } from './clasePaciente';
   styleUrls: ['./comunicacion1-hijo.component.css']
 })
 export class Comunicacion1HijoComponent {
-  nombre:string=""
-  apellidos:string=""
-  direccion:string=""
-  dni:string=""
-  telefono:string=""
-  email:string=""
-  paciente:clasePaciente
-  constructor() {
-    this.paciente=new clasePaciente("","","","","","")
-   }
-  creaPaciente():void{
-    this.paciente = new clasePaciente(this.nombre,this.apellidos,this.dni,this.telefono,this.direccion,this.email)
-    
+  paciente:clasePaciente = new clasePaciente("","","","","","") 
+  @Output() messageEvent = new EventEmitter<clasePaciente>();
+
+  constructor() { }
+  mandaPaciente():void{
+    alert(this.paciente.toString())
+    this.messageEvent.emit(this.paciente);
   }
 }

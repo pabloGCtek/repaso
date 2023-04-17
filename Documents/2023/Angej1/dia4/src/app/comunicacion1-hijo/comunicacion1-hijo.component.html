@@ -1,9 +1,10 @@
-<p>Nombre: <input type="text" [(ngModel)]="nombre"> </p>
-<p>apellidos: <input type="text" [(ngModel)]="apellidos"> </p>
-<p>dni: <input type="text" [(ngModel)]="dni"> </p>
-<p>telefono: <input type="text" [(ngModel)]="telefono"> </p>
-<p>direccion: <input type="text" [(ngModel)]="direccion"> </p>
-<p>email: <input type="text" [(ngModel)]="email"> </p>
+<h1>Hijo manda a padre</h1>
+<p>Nombre: <input type="text" [(ngModel)]="paciente.nombre"> </p>
+<p>apellidos: <input type="text" [(ngModel)]="paciente.apellidos"> </p>
+<p>dni: <input type="text" [(ngModel)]="paciente.dni"> </p>
+<p>telefono: <input type="text" [(ngModel)]="paciente.telefono"> </p>
+<p>direccion: <input type="text" [(ngModel)]="paciente.direccion"> </p>
+<p>email: <input type="text" [(ngModel)]="paciente.email"> </p>
 
-<p><input type="button" value="Mandar paciente" (click)="creaPaciente()"></p>
+<p><input type="button" value="Mandar paciente" (click)="mandaPaciente()"></p>
 
