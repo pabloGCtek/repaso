@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { doctor } from './doctor';
 @Component({
   selector: 'app-comunicacion2-padre',
@@ -11,8 +11,9 @@ export class Comunicacion2PadreComponent {
   credula:number=0
   imagen:string=""
   listaDocs:doctor[] =[]
-
+  @Output() messageEvent = new EventEmitter<doctor[]>();
   mandaDoctor(){
-    
+    this.listaDocs.push(new doctor(this.nombre,this.apellidos,this.credula,this.imagen))
+    this.messageEvent.emit(this.listaDocs);
   }
 }

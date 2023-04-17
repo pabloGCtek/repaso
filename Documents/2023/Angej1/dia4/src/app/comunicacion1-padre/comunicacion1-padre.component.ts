@@ -12,10 +12,6 @@ export class Comunicacion1PadreComponent {
 
   pacient:clasePaciente[] =[]
 
-  ngAfterViewInit(): void {
-    this.pacient.push
-    
-  }
   receiveMessage($event: clasePaciente) {
     this.pacient.push($event);
   }
