@@ -1,0 +1,19 @@
+
+<table >
+    <tr>
+        <td>Id</td>
+        <td>Nombre del producto</td>
+        <td>Precio</td>
+        <td>Cantidad disponible</td>
+        <td>tipo de producto</td>
+    </tr>
+    <tr *ngFor="let producto of listaProds">
+        <td>{{producto.id}}</td>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.precio}} Euros</td>
+        <td>{{producto.cantidad}}</td>
+        <td>{{producto.tipo}}</td>
+    </tr>
+    
+</table>
+<input type="button" value="Actualizar" (click)="actualiza()">

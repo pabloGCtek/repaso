@@ -1,0 +1,13 @@
+<h1>Padre hijo</h1>
+<p>Nombre: <input type="text" [(ngModel)]="nombre"> </p>
+<p>cantidad: <input type="number" [(ngModel)]="cantidad" min="0"> </p>
+<p>precio: <input type="number" [(ngModel)]="precio" min="0" step="1"> </p>
+<p><select name="" id="">
+    <option value="1">alimento</option>
+    <option value="2">perecedero</option>
+    <option value="3">limpieza</option>
+    <option value="4">condimento</option>
+    <option value="5">bebida</option>
+</select></p>
+<p><input type="button" value="Mandar Producto" (click)="mandaProducto()"></p>
+<app-hijo [productosAux]="listaProductos">    </app-hijo>
