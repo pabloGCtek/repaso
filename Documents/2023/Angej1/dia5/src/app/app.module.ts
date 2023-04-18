@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { FormsModule } from '@angular/forms';
+import { PedidoHijoComponent } from './pedido-hijo/pedido-hijo.component';
+import { PedidoPadreComponent } from './pedido-padre/pedido-padre.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
-    HijoComponent
+    HijoComponent,
+    PedidoHijoComponent,
+    PedidoPadreComponent
   ],
   imports: [
     BrowserModule,
